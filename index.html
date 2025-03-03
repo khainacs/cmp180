@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div>
+        <label for="">tên đăng nhập</label>
+        <input id="txtboxUserName" type="text" />
+    </div>
+    <div>
+        <label for="">mật khẩu</label>
+        <input id="txtboxmatkkhau" type="password" />
+    </div>
+    <button>đăng nhập</button>
+    <script>
+        const btnLogin = document.querySelector('button');
+        btnLogin.addEventListener('click', function() {
+            const txtboxUserName = document.getElementById('txtboxUserName').value;
+            const txtboxmatkkhau = document.getElementById('txtboxmatkkhau').value;
+            if (txtboxUserName === 'admin' && txtboxmatkkhau === '123456') {
+                alert('Đăng nhập thành công');
+            } else {
+                alert('Tên đăng nhập hoặc mật khẩu không đúng');
+            }
+        });
+    </script>
 </body>
+
 </html>
