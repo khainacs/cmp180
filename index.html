@@ -17,6 +17,18 @@
         <input id="txtboxmatkkhau" type="password" />
     </div>
     <button>đăng nhập</button>
+    <script>
+        const btnLogin = document.querySelector('button');
+        btnLogin.addEventListener('click', function() {
+            const txtboxUserName = document.getElementById('txtboxUserName').value;
+            const txtboxmatkkhau = document.getElementById('txtboxmatkkhau').value;
+            if (txtboxUserName === 'admin' && txtboxmatkkhau === '123456') {
+                alert('Đăng nhập thành công');
+            } else {
+                alert('Tên đăng nhập hoặc mật khẩu không đúng');
+            }
+        });
+    </script>
 </body>
 
 </html>
